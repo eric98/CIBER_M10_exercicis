@@ -1,0 +1,12 @@
+# Activació del registre d'errors
+log_error = /var/log/mysql/errors_mysql.log
+log_error_verbosity = 3
+
+# Activació del registre de consultes generals
+general_log = 1
+general_log_file = /var/log/mysql/queries.log
+
+# Activació del registre de consultes lentes
+slow_query_log          = 1
+slow_query_log_file     = /var/log/mysql/slow-queries.log
+long_query_time		= 2
