@@ -22,6 +22,10 @@ BEGIN
 END //
 DELIMITER ;
 
+-- Comprovació
+-- DELETE FROM mecanics WHERE nom='Maria'; -> Error
+-- DELETE FROM mecanics WHERE nom='Adri'; -> Query OK
+
 -- b) Crea la següent taula i crea el disparador registrar_esborrar_mecanic que 
 -- insereix un registre cada vegada que s’esborra un mecànic.
 CREATE TABLE log_mecanics_esborrats (
@@ -43,3 +47,7 @@ BEGIN
 		VALUES (OLD.dni, OLD.nom, OLD.edat, OLD.poblacio, NOW());
 END //
 DELIMITER ;
+
+-- Comprovació
+-- DELETE FROM mecanics WHERE nom='Adri';
+-- SELECT * FROM log_mecanics_esborrats WHERE nom='Adri';
