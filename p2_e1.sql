@@ -8,7 +8,7 @@ CREATE TABLE historial_preu_productes (
 	data_hora DATETIME,
 	PRIMARY KEY (id),
 	FOREIGN KEY (id_producte) REFERENCES productes(id)
-)
+);
 
 -- a) El cursor consulta els productes de la cistella per un client específic.
 DECLARE cur CURSOR FOR 
